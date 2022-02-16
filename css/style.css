@@ -1,12 +1,12 @@
 *{
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 h1{
     text-align: center;
     color: #31A5AC;
     font-weight: 700;
 }
-h4{
+h5{
     font-weight: 500;
 }
 .wrapper{
@@ -15,6 +15,9 @@ h4{
 .finance{
     background-color: #F8F8F8;
     text-align: center;
+}
+.notify{
+    display: none;
 }
 label{
     width: 26%;
