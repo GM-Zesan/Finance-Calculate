@@ -1,15 +1,15 @@
-function myfinance(isExpenses){
+function myfinance(isExpense){
     const getIncome = document.getElementById('my-income');
     const myIncome = parseFloat(getIncome.value);
     const foodCost = parseFloat(document.getElementById('ex-food').value);
     const rentCost = parseFloat(document.getElementById('ex-rent').value);
     const clothCost = parseFloat(document.getElementById('ex-cloth').value);
-    const errorMsg = document.getElementById('notify-fail');
+    const errorMsg = document.getElementById('error-msg');
     const totalCost = foodCost+rentCost+clothCost;
     const myBalance = myIncome-totalCost;
     if(myIncome > 0){
         errorMsg.style.display = "none";
-        if(isExpenses == true){
+        if(isExpense == true){
             if(myBalance>=0){
                 document.getElementById('total-cost').innerText = totalCost;
                 document.getElementById('balance').innerText = myBalance;
