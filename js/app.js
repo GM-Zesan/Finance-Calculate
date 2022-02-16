@@ -4,11 +4,11 @@ function myfinance(isExpenses){
     const foodCost = parseFloat(document.getElementById('ex-food').value);
     const rentCost = parseFloat(document.getElementById('ex-rent').value);
     const clothCost = parseFloat(document.getElementById('ex-cloth').value);
-    const failSms = document.getElementById('notify-fail');
+    const errorMsg = document.getElementById('notify-fail');
     const totalCost = foodCost+rentCost+clothCost;
     const myBalance = myIncome-totalCost;
     if(myIncome > 0){
-        failSms.style.display = "none";
+        errorMsg.style.display = "none";
         if(isExpenses == true){
             if(myBalance>=0){
                 document.getElementById('total-cost').innerText = totalCost;
@@ -32,6 +32,9 @@ function myfinance(isExpenses){
             }
             
         }
+    }else{
+        errorMsg.style.display = "block";
+        getIncome.value = '';
     }
 }
 
