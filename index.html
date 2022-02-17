@@ -25,8 +25,8 @@
                 <img class="img-fluid" src="images/money 1.jpg" alt="">
             </div>
             <div class="col-md-5 finance">
-                <div class="notify-section">
-                    <p id="error-msg" class="notify">❌Income should be greater than 0</p>
+                <div>
+                    <p id="error-msg-income" class="notify">❌ Income should be greater than zero</p>
                 </div>
                 <h5 class="mt-5 mb-4">Income</h5>
                 <label>Income :</label>
@@ -34,15 +34,19 @@
                 <h5 class="mt-4 mb-2">Expenses</h5>
                 <div class="mb-2">
                     <label>Food :</label>
-                    <input id="ex-food" class="form-control" value="0" type="number">
+                    <input id="ex-food" class="form-control" value="0" type="text" required>
                 </div>
                 <div class="mb-2">
                     <label>Rent :</label>
-                    <input id="ex-rent" class="form-control" value="0" type="number">
+                    <input id="ex-rent" class="form-control" value="0" type="text" required>
                 </div>
                 <div class="mb-2">
                     <label>Clothes :</label>
-                    <input id="ex-cloth" class="form-control" value="0" type="number">
+                    <input id="ex-cloth" class="form-control" value="0" type="text" required>
+                </div>
+                <div>
+                    <p id="error-msg-expense" class="notify2">❌ Expenses fields should be Positive Integer</p>
+                    <p id="error-msg-null" class="notify3">❌ Expenses fields should not be Empty and string</p>
                 </div>
                 <div>
                     <button id="calclute" class="calculate-btn">Calclute</button>
@@ -51,8 +55,9 @@
                 <h5 class="my-4">Balance : <span id="balance">00</span></h5>
                 <div class="mb-3 save">
                     <label>Save :</label>
-                    <input id="save-percent" class="form-control save-input" type="number" value="0"> % 
+                    <input id="save-percent" class="form-control save-input" type="text" value="0" required> % 
                     <button id="save" class="save-btn">Save</button>
+                    <p id="error-msg-save" class="notify4"> Expenses fields should be Positive Integer</p>
                 </div>
                 <h5 class="mt-3 mb-4">Saving Amount : <span id="my-savings">00</span></h5>
                 <h5 class="my-4">Remaining Balance : <span id="remain">00</span></h5>
