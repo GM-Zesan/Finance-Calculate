@@ -56,10 +56,10 @@ function myfinance(isExpense){
         errorMsgNull.style.display = "none";
         errorMsgNegative.style.display = "block";
     }
-    else if(foodCost == null || foodCost == "" || rentCost == null || rentCost == ""|| clothCost == null || clothCost == ""){
+    else{
         errorMsgNull.style.display = "block";
         errorMsgNegative.style.display = "none";
-    } 
+    }
 }
 
 document.getElementById('calclute').addEventListener('click',function(){
